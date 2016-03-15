@@ -7,10 +7,17 @@ head
    script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js")
 body
    div(ng-app)
-      h1 Binding
+      h1 Binding with curly brackets
       input(type="text" ng-model="message")
       p {{message}}
       p {{message + message}}
       p {{message === 'hello'}}
       p {{ 1+ 2 }}
-      
+
+      h1 binding with ng-bind
+
+      h2(ngbind="'binding ' + message")
+      p(ng-bind="message")
+      p(ng-bind="message + message")
+      p(ng-bind="message === hello")
+      p(ng-bind="1 + 2")
