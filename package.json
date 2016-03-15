@@ -1,0 +1,19 @@
+{
+  "name": "jadeangular",
+  "version": "1.0.0",
+  "description": "Tutorial on angular but also applying the JADE template engine",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Merkoes91/angular.git"
+  },
+  "keywords": [
+    "angular",
+    "jade"
+  ],
+  "author": "Marko de Roos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Merkoes91/angular/issues"
+  },
+  "homepage": "https://github.com/Merkoes91/angular#readme"
+}
