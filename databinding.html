@@ -1,0 +1,32 @@
+
+<!--   Created by Marko on 15-3-2016.--><!DOCTYPE html>
+<html></html>
+<head>
+  <title>Learning Angular Databinding</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app>
+    <h1>Binding with curly brackets</h1>
+    <input type="text" ng-model="message">
+    <p>{{message}}</p>
+    <p>{{message + message}}</p>
+    <p>{{message === 'hello'}}</p>
+    <p>{{ 1+ 2 }}</p>
+    <h1>binding with ng-bind</h1>
+    <p></p><i>Another way to use binding in Angular applications is to use the ng-bind directive. As applications get bigger and take longer to render, it's possible that we can see curly brackets in our browser for a split second while Angular is still compiling our templates. We can avoid this flashing behavior by using ng-bind instead of curly brackets. Since ng-bind is used as an element, our expressions will be hidden from the users until they are ready to be displayed.</i>
+    <h2 ngbind="'binding ' + message"></h2>
+    <p ng-bind="message"></p>
+    <p ng-bind="message + message"></p>
+    <p ng-bind="message === hello"></p>
+    <p ng-bind="1 + 2"></p>
+    <h1>One-Time Binding</h1>
+    <p></p><i>The final way to bind data is one-time binding. As the name suggests, this means the data is only read once from the source, then the data between the source and the view are no longer synchronized. This will come in handy as your application grows as it is a much less resource intensive way of displaying static data or data that only needs to be read once. We can express this by prefixing our variables with ::.</i>
+    <h2 ng-bind="'Binding ' + message"></h2>
+    <input type="text" ng-model="message1" ng-init="message = 'hello'">
+    <p ng-bind="message1"></p>
+    <p ng-bind="::message1 + message1"></p>
+    <p ng-bind="::message1 === hello"></p>
+    <p ng-bind="1 + 2"></p>
+  </div>
+</body>
