@@ -1,0 +1,33 @@
+
+<!--   Created by Marko on 15-3-2016.--><!DOCTYPE html>
+<html>
+  <head></head>
+  <title>Controllers in angular</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+  <script type="text/javascript" src="./scripts/app.js"></script>
+</html>
+<body>
+  <p>use controllers to:</p>
+  <ul>
+    <li>Set up the initial state of the $scope object.</li>
+    <li>Add behavior to the $scope object.</li>
+  </ul>
+  <p>do not use controllers to:</p>
+  <ul>
+    <li>Manipulate DOM - Controllers should contain only business logic. Putting any presentation logic into Controllers significantly affects its testability. Angular has databinding for most cases and directives to encapsulate manual DOM manipulation.</li>
+    <li>Format input - Use<a href="https://docs.angularjs.org/guide/forms">angular form controls</a></li>
+    <li>Filter output - use<a href="https://docs.angularjs.org/guide/filter">Angular services</a></li>
+    <li>Share code or state across controllers - use<a href="https://docs.angularjs.org/guide/services">Angular services</a></li>
+    <li>Manage the life-cycle of other components (for example, to create service instances).</li>
+  </ul>
+</body>
+<div ng-app="app">
+  <h1>controllers</h1>
+  <div ng-controller="mainCTRL as main">
+    <p>{{main.message}}</p>
+    <form ng-submit="main.updateMessage(main.newMessage)">
+      <input type="text" ng-model="main.newMessage">
+      <button type="submit">update Message</button>
+    </form>
+  </div>
+</div>
